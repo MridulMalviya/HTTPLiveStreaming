@@ -23,13 +23,13 @@ namespace HTTPLiveStreaming
         protected override void OnAppearing()
         {
             base.OnAppearing();
-            CrossMediaManager.Current.MediaPlayer.AutoAttachVideoView = false;
+            CrossMediaManager.Current.MediaPlayer.AutoAttachVideoView = true;
             _ = PlayVideo();
         }
 
         private async Task PlayVideo()
         { 
-            var item = await CrossMediaManager.Current.Extractor.CreateMediaItem(HLS_URL1);
+            var item = await CrossMediaManager.Current.Extractor.CreateMediaItem(HLS_URL2);
             item.MediaType = MediaType.Hls;
 
             await CrossMediaManager.Current.Play(item);

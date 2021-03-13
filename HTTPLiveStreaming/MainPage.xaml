@@ -4,7 +4,8 @@
              xmlns:mm="clr-namespace:MediaManager.Forms;assembly=MediaManager.Forms"
              x:Class="HTTPLiveStreaming.MainPage">
 
-   <StackLayout Padding="50">
-            <mm:VideoView x:Name="video" VerticalOptions="FillAndExpand" ShowControls="True"  />
-        </StackLayout>
+    <Grid>
+        <mm:VideoView VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" 
+                      ShowControls="False" />
+    </Grid>
 </ContentPage>

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 
 using Foundation;
+using MediaManager;
 using UIKit;
 
 namespace HTTPLiveStreaming.iOS
@@ -22,9 +23,9 @@ namespace HTTPLiveStreaming.iOS
         //
         public override bool FinishedLaunching(UIApplication app, NSDictionary options)
         {
+            CrossMediaManager.Current.Init();
             global::Xamarin.Forms.Forms.Init();
             LoadApplication(new App());
-
             return base.FinishedLaunching(app, options);
         }
     }
